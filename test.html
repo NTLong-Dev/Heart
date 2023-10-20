@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="test.css">
+</head>
+<body>
+    <div class="containers">
+        <div class="text">
+            <h1>Loading...</h1>
+        </div>
+        <div class="loading">
+            <div class="line-box">
+                <div class="line">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+  var line = document.querySelector(".line");
+  var lineBox = document.querySelector(".line-box");
+  var containers = document.querySelector(".containers");
+  
+  line.addEventListener("animationend", function() {
+    // Chuyển đến trang khác
+    window.location.href = "flower.html";
+  });
+  
+  containers.style.display = "flex";
+  lineBox.style.display = "flex";
+  line.style.animationPlayState = "running";
+});
+    </script>
+</body>
+</html>
